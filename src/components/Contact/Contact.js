@@ -115,7 +115,11 @@ const Contact = () => {
         {...message.input}
       />
 
-      {submitted && <ThankYou>Thank you for contacting me!</ThankYou>}
+      {submitted && (
+        <ThankYou>
+          Thank you for contacting me! {"I'll"} be replying as soon as possible.
+        </ThankYou>
+      )}
 
       <ButtonContainer>
         <Button submitting={submitting} type="submit" value="Send" />
