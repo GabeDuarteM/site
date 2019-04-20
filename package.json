@@ -1,6 +1,5 @@
 {
   "name": "site",
-  "private": true,
   "description": "My personal website",
   "version": "1.0.0",
   "author": "Gabriel Duarte",
