@@ -1,7 +1,7 @@
 {
   "version": 2,
   "name": "Site",
-  "alias": ["gabrielduarte.tech"],
+  "alias": ["gabrielduarte.tech", "www.gabrielduarte.tech"],
   "builds": [
     {
       "src": "package.json",
