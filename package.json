@@ -36,7 +36,7 @@
     "gatsby-plugin-sitemap": "2.1.0",
     "gatsby-plugin-styled-components": "3.0.7",
     "gatsby-transformer-sharp": "2.1.19",
-    "gd-configs": "6.0.3",
+    "gd-configs": "6.1.2",
     "prettier": "1.17.0"
   },
   "keywords": [
