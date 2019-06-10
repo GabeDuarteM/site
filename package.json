@@ -4,23 +4,23 @@
   "version": "1.0.0",
   "author": "Gabriel Duarte",
   "dependencies": {
-    "final-form": "4.12.0",
+    "final-form": "4.13.1",
     "modern-normalize": "0.5.0",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-final-form-hooks": "2.0.0",
     "react-helmet": "5.2.1",
-    "styled-components": "4.2.0"
+    "styled-components": "4.3.1"
   },
   "devDependencies": {
     "babel-eslint": "10.0.1",
     "babel-plugin-styled-components": "1.10.0",
     "eslint": "5.16.0",
-    "eslint-config-prettier": "4.2.0",
+    "eslint-config-prettier": "4.3.0",
     "eslint-plugin-babel": "5.3.0",
-    "eslint-plugin-import": "2.17.2",
+    "eslint-plugin-import": "2.17.3",
     "eslint-plugin-jsx-a11y": "6.2.1",
-    "eslint-plugin-prettier": "3.0.1",
+    "eslint-plugin-prettier": "3.1.0",
     "eslint-plugin-react": "7.13.0",
     "eslint-plugin-react-hooks": "1.6.0",
     "gatsby": "2.8.8",
@@ -36,8 +36,8 @@
     "gatsby-plugin-sitemap": "2.1.0",
     "gatsby-plugin-styled-components": "3.0.7",
     "gatsby-transformer-sharp": "2.1.21",
-    "gd-configs": "6.0.3",
-    "prettier": "1.17.0"
+    "gd-configs": "6.1.2",
+    "prettier": "1.18.2"
   },
   "keywords": [
     "gatsby"
