@@ -37,7 +37,7 @@
     "gatsby-plugin-styled-components": "3.1.2",
     "gatsby-transformer-sharp": "2.2.3",
     "gd-configs": "6.1.2",
-    "prettier": "1.18.2"
+    "prettier": "1.19.1"
   },
   "keywords": [
     "gatsby"
