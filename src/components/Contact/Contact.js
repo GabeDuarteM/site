@@ -1,6 +1,7 @@
 import React from 'react'
 import { useForm, useField } from 'react-final-form-hooks'
 import styled from 'styled-components/macro'
+import ky from 'ky'
 
 import Field from '../Field'
 import Button from '../Button/Button'
@@ -22,18 +23,11 @@ const isFilled = (value) => {
   return value !== null && value !== undefined && value !== ''
 }
 
-const createFormData = (values) => {
-  const form = new FormData()
-
-  Object.keys(values).forEach((field) => {
-    form.set(field, values[field])
-  })
-
-  form.set('_origin', location.origin)
-  form.set('_form', 'Contact on gabrielduarte.tech')
-
-  return form
-}
+const createFormData = (values) => ({
+  ...values,
+  _origin: location.origin,
+  _form: `Contact on ${location.origin}`,
+})
 
 const Contact = () => {
   const [submitted, setSubmitted] = React.useState(false)
@@ -41,14 +35,9 @@ const Contact = () => {
   const onSubmit = async (values) => {
     const form = createFormData(values)
 
-    await fetch(
-      'https://www.briskforms.com/go/ac606b73f7f6862f52dbefda69f79db9',
-      {
-        method: 'POST',
-        body: form,
-        mode: 'no-cors',
-      },
-    )
+    await ky.post('https://app.99inbound.com/api/e/BCFzX8eV', {
+      json: form,
+    })
 
     setSubmitted(true)
   }
