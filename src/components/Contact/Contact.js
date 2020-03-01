@@ -35,8 +35,11 @@ const Contact = () => {
   const onSubmit = async (values) => {
     const form = createFormData(values)
 
-    await ky.post('https://app.99inbound.com/api/e/BCFzX8eV', {
+    await ky.post('https://formcarry.com/s/ypblsNbpZ95c', {
       json: form,
+      headers: {
+        Accept: 'application/json',
+      },
     })
 
     setSubmitted(true)
