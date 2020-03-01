@@ -21,7 +21,10 @@ const StyledIntroduction = styled.div`
 `
 
 const Introduction = () => {
-  const [textTyped, textToType] = useTypewriter(
+  const [
+    textTyped,
+    textToType,
+  ] = useTypewriter(
     `Hi, I'm Gabriel Duarte. I like to create useful things that positively make an impact on people.`,
     { ',': 200, '.': 600 },
   )

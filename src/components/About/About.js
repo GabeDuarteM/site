@@ -32,15 +32,15 @@ const About = () => {
   return (
     <StyledAbout>
       <Paragraph>
-        {`I'm`} a Javascript developer born in Brazil, graduated in Information
+        I'm a Javascript developer born in Brazil, graduated in Information
         Systems and now currently living in Hamburg, Germany.
       </Paragraph>
 
       <Paragraph>
-        {`I'm`} a very positive person, always looking out for a light and
-        flexible environment, good conversations, and good music. On my free
-        time, I like to play guitar, watch TV shows and movies, play some games
-        and, of course, to code. Be sure to check my repositories on{' '}
+        I'm a very positive person, always looking out for a light and flexible
+        environment, good conversations, and good music. On my free time, I like
+        to play guitar, watch TV shows and movies, play some games and, of
+        course, to code. Be sure to check my repositories on{' '}
         <ExternalLink href="https://www.github.com/GabrielDuarteM">
           GitHub
         </ExternalLink>
@@ -67,7 +67,7 @@ const About = () => {
 
       <Paragraph>
         One of the traits I think that defines me the most, is curiosity.
-        Because of it, {`I'm`} always looking for new things, pushing myself
+        Because of it, I'm always looking for new things, pushing myself
         further, learning about new technologies, and looking for ways to do the
         things I already do, but in a better way.
       </Paragraph>

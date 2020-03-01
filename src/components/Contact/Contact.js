@@ -106,7 +106,7 @@ const Contact = () => {
 
       {submitted && (
         <ThankYou>
-          Thank you for contacting me! {"I'll"} be replying as soon as possible.
+          Thank you for contacting me! I'll be replying as soon as possible.
         </ThankYou>
       )}
 
