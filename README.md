@@ -1,3 +1,3 @@
 # site
 
-<https://www.gabrielduarte.tech>
+<https://www.gabrielduarte.dev>
