@@ -6,9 +6,9 @@ import useTheme from '../ThemeContext/ThemeContext'
 const ICON_SIZE = '24px'
 
 const SocialMediaIcon = ({ Logo, ...props }) => {
-  const { theme } = useTheme()
+  const theme = useTheme()
 
-  const fill = `#${theme === 'dark' ? 'fff' : '343e46'}`
+  const fill = `${theme.colors.text.primary}`
 
   return (
     <ExternalLink {...props}>

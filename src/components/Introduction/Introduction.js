@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 
-import useTypewriter from '../../hooks/useTypewriter/useTypewriter'
+import useTypewriter from '../../hooks/useTypewriter'
 
 const HiddenText = styled.span`
   opacity: 0;
@@ -18,6 +18,7 @@ const StyledIntroduction = styled.div`
   align-items: center;
   justify-content: center;
   display: flex;
+  white-space: pre-wrap;
 `
 
 const Introduction = () => {
@@ -25,8 +26,8 @@ const Introduction = () => {
     textTyped,
     textToType,
   ] = useTypewriter(
-    `Hi, I'm Gabriel Duarte. I like to create useful things that positively make an impact on people.`,
-    { ',': 200, '.': 600 },
+    `Hey! I'm Gabriel Duarte.\nYour friendly neighborhood developer.`,
+    { '!': 200, '.': 600 },
   )
 
   return (

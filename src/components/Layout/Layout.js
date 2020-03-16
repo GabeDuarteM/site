@@ -13,6 +13,8 @@ const GlobalCss = createGlobalStyle`
   html,
   body {
     font-family: Roboto;
+    background-color: ${({ theme }) => theme.colors.primary[3]};
+    color: ${({ theme }) => theme.colors.text.primary};
   }
 
   h1,
@@ -22,6 +24,10 @@ const GlobalCss = createGlobalStyle`
   h5,
   h6 {
     font-family: Montserrat;
+  }
+
+  a {
+    color: ${({ theme }) => theme.colors.text.primary};
   }
 `
 

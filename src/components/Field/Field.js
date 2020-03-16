@@ -6,13 +6,12 @@ const StyledField = styled.div`
 `
 
 const Label = styled.label`
-  color: ${(props) => (props.error ? 'red' : '#282c34')};
+  color: ${({ theme }) => theme.colors.text.primary};
   position: absolute;
   pointer-events: none;
   font-size: 12px;
   margin-left: 5px;
   margin-top: 5px;
-  background: white;
   height: 20px;
   padding-top: 4px;
   padding-left: 8px;
@@ -20,20 +19,27 @@ const Label = styled.label`
 `
 
 const Input = styled.input`
-  color: ${(props) => (props.error ? 'red' : '#282c34')};
+  background: transparent;
+  color: ${({ theme }) => theme.colors.text.primary};
   height: ${(props) => (props.textarea ? '200px' : '55px')};
   padding: 8px;
   padding-top: ${(props) => (props.textarea ? '24px' : '18px')};
   flex: auto;
   transition: none;
   margin: 4px;
-  border: solid 1px ${(props) => (props.error ? 'red' : 'gray')};
+  border: solid 1px ${({ theme }) => theme.colors.primary[1]};
 
-  :-webkit-autofill,
-  :-webkit-autofill:hover,
-  :-webkit-autofill:focus {
-    box-shadow: 0 0 0 30px white inset;
-    border: solid 1px darkgray;
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    box-shadow: 0 0 0 30px ${({ theme }) => theme.colors.primary[3]} inset;
+    -webkit-text-fill-color: ${({ theme }) => theme.colors.text.primary};
+    // border: solid 1px ${({ theme }) => theme.colors.primary[1]};
+    border-radius: inherit
+  }
+  /*Change text in autofill textbox*/
+  input:-webkit-autofill {
+    -webkit-text-fill-color: yellow !important;
   }
 `
 

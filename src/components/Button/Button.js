@@ -25,8 +25,9 @@ const LoadingInnerRing = styled.div`
   top: 20px;
   left: 20px;
   border-radius: 50%;
-  border: 8px solid #000;
-  border-color: white transparent white transparent;
+  border: 8px solid;
+  border-color: ${({ theme }) => theme.colors.primary[1]} transparent
+    ${({ theme }) => theme.colors.primary[1]} transparent;
   animation: ${dualRing} 1s linear infinite;
 `
 
@@ -44,7 +45,7 @@ const LoadingRings = styled.div`
 
 const StyledButton = styled.button`
   background: transparent;
-  border: solid 4px white;
+  border: solid 4px ${({ theme }) => theme.colors.primary[1]};
   height: 55px;
   width: 100%;
   color: inherit;
@@ -52,10 +53,11 @@ const StyledButton = styled.button`
   :hover,
   :active,
   :focus {
-    background-color: white;
-    color: #343e46;
+    background-color: ${({ theme }) => theme.colors.primary[1]};
+    color: ${({ theme }) => theme.colors.text.secondary};
     ${LoadingInnerRing} {
-      border-color: #343e46 transparent #343e46 transparent;
+      border-color: ${({ theme }) => theme.colors.text.secondary} transparent
+        ${({ theme }) => theme.colors.text.secondary} transparent;
     }
   }
 `
