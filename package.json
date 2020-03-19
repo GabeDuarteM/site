@@ -5,8 +5,8 @@
   "author": "Gabriel Duarte",
   "dependencies": {
     "modern-normalize": "0.6.0",
-    "react": "16.13.0",
-    "react-dom": "16.13.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
     "react-helmet": "5.2.1",
     "styled-components": "5.0.1"
   },
@@ -20,7 +20,7 @@
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-prettier": "3.1.2",
     "eslint-plugin-react": "7.19.0",
-    "eslint-plugin-react-hooks": "2.5.0",
+    "eslint-plugin-react-hooks": "2.5.1",
     "gatsby": "2.19.45",
     "gatsby-image": "2.2.44",
     "gatsby-plugin-bundle-stats": "2.0.1",
