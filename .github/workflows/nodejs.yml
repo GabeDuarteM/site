@@ -27,9 +27,16 @@ jobs:
     - name: Run CI script
       run: yarn run ci
 
-    - name: Deploy
-      if: github.event_name == 'pull_request' && github.ref != 'refs/heads/master'
+    - name: Deploy draft
+      if: github.ref != 'refs/heads/master'
       run: npx netlify-cli@^2 deploy --dir=./public
+      env:
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+
+    - name: Deploy production
+      if: github.ref == 'refs/heads/master'
+      run: npx netlify-cli@^2 deploy --dir=./public --prod
       env:
         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
