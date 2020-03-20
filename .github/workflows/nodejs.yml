@@ -29,7 +29,7 @@ jobs:
 
     - name: Deploy
       if: github.event_name == 'pull_request' && github.ref != 'refs/heads/master'
-      run: npx netlify-cli@^2 deploy
+      run: npx netlify-cli@^2 deploy --dir=./public
       env:
         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
