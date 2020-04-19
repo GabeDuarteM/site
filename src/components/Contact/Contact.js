@@ -27,6 +27,7 @@ const Contact = () => {
       method="POST"
       data-netlify
       data-netlify-honeypot="ravena"
+      data-netlify-recaptcha
     >
       <Title>Contact me</Title>
 
@@ -41,6 +42,7 @@ const Contact = () => {
 
       {/* The `form-name` hidden field is required to support form submissions without JavaScript on netlify forms */}
       <input type="hidden" name="form-name" value="contact" />
+      <div data-netlify-recaptcha />
 
       <ButtonContainer>
         <Button
