@@ -1095,30 +1095,31 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@bundle-stats/cli-utils@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@bundle-stats/cli-utils/-/cli-utils-2.0.1.tgz#7b02451d34edb5c92464da367c8dd33ea2052fda"
-  integrity sha512-MYqmeIv2UciUCmCALEgkoAYgbulcIWIl6ZSKMolIo8Pg5tvWCAThuu8H6XiY1TebQdEcNCUQPqI9fd9wKrHgfg==
+"@bundle-stats/cli-utils@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@bundle-stats/cli-utils/-/cli-utils-2.2.0.tgz#c4003e495cb0d56cb009be775071da32350e5466"
+  integrity sha512-tJvzNy54QQ30VXdfZAiKFfZLHN1VFuwfrhj/CsEHSNR5jLHqrowf2IQfZ6oqoX4o01WMC2Tj1YE5tTjiKS1p+Q==
   dependencies:
-    "@bundle-stats/html-templates" "^2.0.1"
-    "@bundle-stats/utils" "^2.0.0"
+    "@bundle-stats/html-templates" "^2.2.0"
+    "@bundle-stats/utils" "^2.2.0"
     core-js "^3.1.4"
     find-cache-dir "^3.1.0"
     fs-extra "^8.1.0"
     lodash "4.17.15"
 
-"@bundle-stats/html-templates@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@bundle-stats/html-templates/-/html-templates-2.0.1.tgz#868bfa25f049ed591a4536d69c758c3af0f19b64"
-  integrity sha512-ApF5kWVUNo/ZBVdcN3cuW76F9+iGZiTUX7UxCtXbmYTzjCY7KlWo6IB/Y8t38kP60CEZHY9dVWoM3jOmG/Fv+Q==
+"@bundle-stats/html-templates@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@bundle-stats/html-templates/-/html-templates-2.2.0.tgz#a925e7329c9fca44d7249c78ab97f63997bbd466"
+  integrity sha512-GBzzwLgRJ/im18m6m5XG+EP9VwyylsKxjbqRlTn2/vaIexMMHLWfCpbfcj4Tsr37ZIyJlSzj69lvRhbRTshsmQ==
 
-"@bundle-stats/utils@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@bundle-stats/utils/-/utils-2.0.0.tgz#94c07223520cf3b219e8e89b8920688e2d1a7d2a"
-  integrity sha512-js4CeWoFzk2Y7Vv5QeBN1qvPBS+9zp9NwJR5UX9NQ6WClsRFg/GEAKse2zxJGnicB83+YNuqO5lrTNqMr7jZvg==
+"@bundle-stats/utils@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@bundle-stats/utils/-/utils-2.2.0.tgz#1a24abe41de35dfcf1ef72c7a04045824b1996a7"
+  integrity sha512-VKUPXpipAv/NIHbR1/4X5wBMFUT8IlBHb8u8dJKRmmIWSXmlKBSi5gsf48xSd/6HXZXMY1g+pE+t3/R4A/PoBg==
   dependencies:
     convert-units "^2.3.4"
     core-js "^3.1.4"
+    superstruct "^0.8.3"
 
 "@emotion/is-prop-valid@^0.8.8":
   version "0.8.8"
@@ -3174,13 +3175,13 @@ builtin-status-codes@^3.0.0:
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
   integrity sha1-hZgoeOIbmOHGZCXgPQF0eI9Wnug=
 
-bundle-stats-webpack-plugin@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/bundle-stats-webpack-plugin/-/bundle-stats-webpack-plugin-2.0.1.tgz#a31b7ca0c408e01e18e230a64e4b85fb07598f7c"
-  integrity sha512-2Oe+gAN67T3LeWv6tJL7eWHILkceu4mFkf2czurThf9S5LOXDDeEKvB88fvRuhliDS0DdDjzWDQ14lIWbDFifA==
+bundle-stats-webpack-plugin@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/bundle-stats-webpack-plugin/-/bundle-stats-webpack-plugin-2.2.0.tgz#c5647bb52b14a04066638783e60e835a70647d02"
+  integrity sha512-ubYREqH1hUbhtiu16jS7Ic462DkZt8v6SJILnkJW6gsUljBPK08gI6oZ+fmSh0pAvR8/9o63MnzTOL86bJu2YQ==
   dependencies:
-    "@bundle-stats/cli-utils" "^2.0.1"
-    "@bundle-stats/utils" "^2.0.0"
+    "@bundle-stats/cli-utils" "^2.2.0"
+    "@bundle-stats/utils" "^2.2.0"
     core-js "^3.1.4"
     lodash "4.17.15"
 
@@ -6383,12 +6384,12 @@ gatsby-page-utils@^0.2.1:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
-gatsby-plugin-bundle-stats@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-bundle-stats/-/gatsby-plugin-bundle-stats-2.0.1.tgz#5cb3e9a1f6ecf8e3645311ac4b57d7881df532c9"
-  integrity sha512-JNqIyJbxZp9vxz56c4Dh6HECHl3xnXDWuE0HJ2P9pCNmUyMLdqlwDIv3rJYL0xuJdQ46uFRhovqS0WvY7tmOOw==
+gatsby-plugin-bundle-stats@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-bundle-stats/-/gatsby-plugin-bundle-stats-2.2.0.tgz#f82fe31747fb60d5fd80de353dca3ac99aa62021"
+  integrity sha512-/w0Z7tU1nIkwUJ5P2mLhesko/ln3W/6IB+iqxVWR71IllvH0rItmQYjriHji7V+fo67Yd+eLI+rpswe1QVwDmw==
   dependencies:
-    bundle-stats-webpack-plugin "^2.0.1"
+    bundle-stats-webpack-plugin "^2.2.0"
 
 gatsby-plugin-manifest@2.4.2:
   version "2.4.2"
@@ -13715,6 +13716,14 @@ sudo-prompt@^8.2.0:
   resolved "https://registry.yarnpkg.com/sudo-prompt/-/sudo-prompt-8.2.5.tgz#cc5ef3769a134bb94b24a631cc09628d4d53603e"
   integrity sha512-rlBo3HU/1zAJUrkY6jNxDOC9eVYliG6nS4JA8u8KAshITd07tafMc/Br7xQwCSseXwJ2iCcHCE8SNWX3q8Z+kw==
 
+superstruct@^0.8.3:
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/superstruct/-/superstruct-0.8.3.tgz#fb4d8901aca3bf9f79afab1bbab7a7f335cc4ef2"
+  integrity sha512-LbtbFpktW1FcwxVIJlxdk7bCyBq/GzOx2FSFLRLTUhWIA1gHkYPIl3aXRG5mBdGZtnPNT6t+4eEcLDCMOuBHww==
+  dependencies:
+    kind-of "^6.0.2"
+    tiny-invariant "^1.0.6"
+
 supports-color@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"
@@ -13990,6 +13999,11 @@ timsort@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/timsort/-/timsort-0.3.0.tgz#405411a8e7e6339fe64db9a234de11dc31e02bd4"
   integrity sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=
+
+tiny-invariant@^1.0.6:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/tiny-invariant/-/tiny-invariant-1.1.0.tgz#634c5f8efdc27714b7f386c35e6760991d230875"
+  integrity sha512-ytxQvrb1cPc9WBEI/HSeYYoGD0kWnGEOR8RY6KomWLBVhqz0RgTwVO9dLrGz7dC+nN9llyI7OKAgRq8Vq4ZBSw==
 
 tinycolor2@^1.4.1:
   version "1.4.1"
