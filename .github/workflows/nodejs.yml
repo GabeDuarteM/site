@@ -33,7 +33,7 @@ jobs:
     - name: Netlify Deploy
       uses: nwtgck/actions-netlify@v1.1.0
       with:
-        publish-dir: build
+        publish-dir: public
         github-token: ${{ secrets.GITHUB_TOKEN }}
         production-branch: master
       env:
