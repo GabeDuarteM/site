@@ -27,16 +27,15 @@ jobs:
     - name: Run CI script
       run: yarn run ci
 
-    - name: Deploy draft
-      if: github.ref != 'refs/heads/master'
-      run: npx netlify-cli@^2 deploy --dir=./public
+    - name: Run CI script
+      run: yarn run build
+      
+    - name: Netlify Deploy
+      uses: nwtgck/actions-netlify@v1.1.0
+      with:
+        publish-dir: build
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        production-branch: master
       env:
-        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-
-    - name: Deploy production
-      if: github.ref == 'refs/heads/master'
-      run: npx netlify-cli@^2 deploy --dir=./public --prod
-      env:
         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
