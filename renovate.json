@@ -3,7 +3,7 @@
   "packageRules": [
     {
       "packageNames": ["gatsby"],
-      "extends": ["every weekend"]
+      "schedule": ["every weekend"]
     }
   ]
 }
