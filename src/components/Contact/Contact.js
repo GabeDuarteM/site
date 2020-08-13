@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components/macro'
+import ReCAPTCHA from 'react-google-recaptcha'
 
 import Field from '../Field'
 import Button from '../Button/Button'
@@ -14,11 +15,23 @@ const ButtonContainer = styled.div`
 
 const Contact = () => {
   const [submitting, setSubmitting] = React.useState(false)
+  const captchaRef = React.useRef()
+  const recaptchaResponseRef = React.useRef()
 
   // When doing SSR, location does not exist, so we make this check
   let origin
   if (typeof location !== `undefined`) {
     origin = location.origin
+  }
+
+  const onSubmitForm = (event) => {
+    event.persist()
+    event.preventDefault()
+    captchaRef.current.executeAsync().then((captchaResult) => {
+      recaptchaResponseRef.current.value = captchaResult
+
+      event.target.submit()
+    })
   }
 
   return (
@@ -28,6 +41,7 @@ const Contact = () => {
       data-netlify
       data-netlify-honeypot="ravena"
       data-netlify-recaptcha
+      onSubmit={onSubmitForm}
     >
       <Title>Contact me</Title>
 
@@ -39,10 +53,17 @@ const Contact = () => {
       <div hidden>
         <input name="ravena" />
       </div>
+      <div hidden>
+        <input ref={recaptchaResponseRef} name="g-recaptcha-response" />
+      </div>
 
       {/* The `form-name` hidden field is required to support form submissions without JavaScript on netlify forms */}
       <input type="hidden" name="form-name" value="contact" />
-      <div data-netlify-recaptcha />
+      <ReCAPTCHA
+        sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY}
+        ref={captchaRef}
+        size="invisible"
+      />
 
       <ButtonContainer>
         <Button
