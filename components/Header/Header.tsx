@@ -11,17 +11,17 @@ const Header: React.FC<HeaderProps> = () => {
     <header className="mx-12 my-4 flex justify-around items-center">
       <SocialMediaIcon
         Svg={GithubSvg}
-        alt="Github profile"
+        aria-label="Github profile"
         href="https://github.com/GabrielDuarteM"
       />
       <Link href="/">
-        <span className="text-[21px] font-thin border-b-violet-400 border-b-2 w-24 pb-1 text-center cursor-pointer select-none leading-tight">
+        <span className="text-[21px] font-thin border-b-violet-400 border-b-2 w-24 pb-1 text-center cursor-pointer select-none leading-tight font-['Montserrat']">
           Gabriel <div className="font-medium -mt-1">Duarte</div>
         </span>
       </Link>
       <SocialMediaIcon
         Svg={LinkedinSvg}
-        alt="Linkedin profile"
+        aria-label="Linkedin profile"
         href="https://www.linkedin.com/in/GabrielDuarteM"
       />
     </header>

@@ -1,6 +1,7 @@
 import type { NextPage } from "next"
 import Head from "next/head"
 import Image from "next/image"
+import About from "../components/About"
 import Introduction from "../components/Introduction"
 import Layout from "../components/Layout"
 import styles from "../styles/Home.module.css"
@@ -9,6 +10,7 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <Introduction />
+      <About />
     </Layout>
   )
 }
