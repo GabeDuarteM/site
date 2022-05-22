@@ -21,7 +21,7 @@ a {
 
 @layer base {
   html {
-    @apply bg-[#1b0843];
+    background: theme("colors.bgColor");
     @apply text-violet-400;
   }
 }
