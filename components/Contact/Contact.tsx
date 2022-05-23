@@ -1,4 +1,5 @@
 import React from "react"
+import Button from "../Button"
 import Field from "../Field"
 
 interface ContactProps {}
@@ -13,6 +14,7 @@ const Contact: React.FC<ContactProps> = () => {
       <Field label="Name" required />
       <Field label="Subject" required />
       <Field label="Message" textarea required />
+      <Button>Send</Button>
     </form>
   )
 }

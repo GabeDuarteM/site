@@ -18,7 +18,7 @@ const SocialMediaIcon: React.FC<SocialMediaIconProps> = ({
 }) => {
   return (
     <ExternalLink href={href} {...props}>
-      <Svg className="fill-violet-400" width="24px" height="24px" />
+      <Svg className="fill-violet-300" width="24px" height="24px" />
     </ExternalLink>
   )
 }

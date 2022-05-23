@@ -15,7 +15,7 @@ const Header: React.FC<HeaderProps> = () => {
         href="https://github.com/GabrielDuarteM"
       />
       <Link href="/">
-        <span className="text-[21px] font-thin border-b-violet-400 border-b-2 w-24 pb-1 text-center cursor-pointer select-none leading-tight font-['Montserrat']">
+        <span className="text-[21px] font-thin border-b-violet-300 border-b-2 w-24 pb-1 text-center cursor-pointer select-none leading-tight font-['Montserrat']">
           Gabriel <div className="font-medium -mt-1">Duarte</div>
         </span>
       </Link>

@@ -2,5 +2,5 @@
 .field:-webkit-autofill:hover,
 .field:-webkit-autofill:focus {
   box-shadow: theme("colors.bgColor") 0px 0px 0px 30px inset;
-  -webkit-text-fill-color: theme("colors.violet.400");
+  -webkit-text-fill-color: theme("colors.violet.300");
 }
