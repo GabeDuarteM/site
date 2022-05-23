@@ -29,7 +29,7 @@ const Field: React.FC<FieldProps> = ({ label, textarea = false, ...props }) => {
       </label>
       <Input
         className={`w-full bg-transparent px-2 pb-2 m-1 border border-violet-400 ${specificClasses} ${styles.field}`}
-        name={label}
+        name={label.toLowerCase()}
         {...props}
       />
     </div>

@@ -6,7 +6,12 @@ interface ContactProps {}
 
 const Contact: React.FC<ContactProps> = () => {
   return (
-    <form className="w-[75vw] max-w-[900px] my-5" name="contact" method="POST">
+    <form
+      action="/api/contact"
+      className="w-[75vw] max-w-[900px] my-5"
+      name="contact"
+      method="POST"
+    >
       <h2 className="font-medium font-[Montserrat] text-2xl my-5">
         Contact me
       </h2>
