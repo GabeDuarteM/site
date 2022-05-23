@@ -8,8 +8,34 @@ interface ContactParams {
   message: string
 }
 
+const {
+  SES_AWS_DEFAULT_REGION,
+  SES_AWS_ACCESS_KEY_ID,
+  SES_AWS_SECRET_ACCESS_KEY,
+  FROM_EMAIL,
+} = process.env
+
+if (
+  !SES_AWS_DEFAULT_REGION ||
+  !SES_AWS_ACCESS_KEY_ID ||
+  !SES_AWS_SECRET_ACCESS_KEY ||
+  !FROM_EMAIL
+) {
+  throw new Error(
+    "Misconfigured environment. Couldn't find the environment variable FROM_EMAIL, SES_AWS_DEFAULT_REGION SES_AWS_ACCESS_KEY_ID or SES_AWS_SECRET_ACCESS_KEY"
+  )
+}
+
+aws.config.update({
+  credentials: {
+    accessKeyId: SES_AWS_ACCESS_KEY_ID,
+    secretAccessKey: SES_AWS_SECRET_ACCESS_KEY,
+  },
+  region: SES_AWS_DEFAULT_REGION,
+})
+
 const ses = new aws.SES({
-  region: process.env.AWS_DEFAULT_REGION,
+  region: process.env.SES_AWS_DEFAULT_REGION,
 })
 
 export default async function handler(
