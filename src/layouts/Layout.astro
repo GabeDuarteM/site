@@ -44,13 +44,24 @@ const { title } = Astro.props
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+
+    <meta
+      name="description"
+      content="Software developer, nerd, gamer. Gabriel is a curious person from Brazil, currently living in Germany. He loves helping organizations to build ambitious and well structured web projects. Sometimes, he also writes in the third person."
+    />
+    <meta property="og:title" content="Gabriel Duarte" />
+    <meta
+      property="og:description"
+      content="Software developer, nerd, gamer. Gabriel is a curious person from Brazil, currently living in Germany. He loves helping organizations to build ambitious and well structured web projects. Sometimes, he also writes in the third person."
+    />
+    <meta name="theme-color" content="#000000" />
+
     <title>{title}</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body>
     <header class="mx-12 my-4 flex justify-around items-center">
