@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Introduction from '../components/Introduction.tsx'
 import ExternalLink from '../components/ExternalLink.astro'
 
 const techs = [
@@ -19,7 +18,41 @@ const techs = [
 ---
 
 <Layout title="Gabriel Duarte">
-  <Introduction client:load />
+  <div
+    class="text-4xl text-center font-['Montserrat'] min-h-[400px] [400px] h-[66vh] w-full items-center justify-center flex whitespace-pre-wrap"
+  >
+    <span id="textTyped">{`Hey! I'm Gabriel Duarte.\nYour friendly neighborhood developer.`}</span>
+  </div>
+  <script>
+    const textTyped = document.getElementById('textTyped')
+
+    if (!textTyped) {
+      throw new Error("Whoops, this shouldn't happen, the textTyped was not found")
+    }
+
+    const fullText = textTyped.innerText
+    textTyped.innerHTML = ''
+
+    interface TypewriterPauses {
+      [keyof: string]: number
+    }
+
+    const customPauses: TypewriterPauses = {
+      '!': 200,
+      '.': 600,
+    }
+
+    let i = 0
+
+    const typeWriter = () => {
+      if (i < fullText.length) {
+        setTimeout(typeWriter, customPauses[fullText.charAt(i)] || 35)
+        textTyped.textContent += fullText.charAt(i)
+        i++
+      }
+    }
+    typeWriter()
+  </script>
 
   <div class="text-lg flex flex-col items-center w-[75vw] max-w-[900px]">
     <p class="text-justify my-4">
@@ -30,10 +63,9 @@ const techs = [
       {"I'm"} a very positive person, always looking out for a light and flexible environment, good conversations, and good
       music. On my free time, I like to play guitar, watch TV shows and movies, play some games and, of course, to code.
       Be sure to check my repositories on{' '}
-      <ExternalLink href="https://www.github.com/GabrielDuarteM">GitHub</ExternalLink>
-      . Maybe you will find something of your liking{' '}
-      <span role="img" aria-label="Emoji of winking face with tongue sticking out"> 😜</span>
-      .
+      <ExternalLink href="https://www.github.com/GabrielDuarteM">GitHub</ExternalLink>. Maybe you will find something of
+      your liking{' '}
+      <span role="img" aria-label="Emoji of winking face with tongue sticking out"> 😜</span>.
     </p>
     <p class="text-justify my-4">
       I normally do things with{' '}
@@ -43,8 +75,8 @@ const techs = [
             <ExternalLink href={tech.href}>{tech.name}</ExternalLink>,{' '}
           </span>
         ))
-      }
-      and basically, any other technology that simplifies the development workflow, or that adds value to the user experience.
+      }and basically any other technology that simplifies the development workflow, or that adds value to the user
+      experience.
     </p>
     <p class="text-justify my-4">
       One of the traits I think that defines me the most, is curiosity. Because of it, {"I'm"} always looking for new things,
@@ -58,8 +90,7 @@ const techs = [
     <div class="text-justify text-lg">
       Due to bots, I unfortunately can't put my contact information directly here, but if you want to get in touch with
       me, you can always get my contact information on{' '}
-      <ExternalLink href="https://www.linkedin.com/in/gabrielduartem/">LinkedIn</ExternalLink>{' '}
-        or{' '}
+      <ExternalLink href="https://www.linkedin.com/in/gabrielduartem/">LinkedIn</ExternalLink>{' '}or{' '}
       <ExternalLink href="https://www.github.com/GabrielDuarteM">GitHub</ExternalLink>.
     </div>
   </div>
