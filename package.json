@@ -9,7 +9,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "check": "tsc --noEmit && eslint . --ext .js,.jsx,.ts,.tsx,.astro"
+    "check": "tsc --noEmit && eslint . --ext .js,.jsx,.ts,.tsx,.astro && prettier --check --plugin-search-dir=. ."
   },
   "dependencies": {
     "@astrojs/tailwind": "^2.1.0",
