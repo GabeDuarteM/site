@@ -1,0 +1,10 @@
+---
+export interface Props {
+  children: any
+  href: string
+}
+
+const props = Astro.props
+---
+
+<a class="underline" target="_blank" rel="noopener noreferrer" {...props}><slot /></a>
