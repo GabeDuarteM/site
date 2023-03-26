@@ -1,9 +1,0 @@
-{
-  "extends": ["config:base"],
-  "packageRules": [
-    {
-      "packageNames": ["gatsby"],
-      "schedule": ["every weekend"]
-    }
-  ]
-}
