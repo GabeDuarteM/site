@@ -68,26 +68,28 @@ const { title } = Astro.props
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
     {
-      import.meta.env.PROD === true && (
+      import.meta.env.PUBLIC_UMAMI_WEBSITE_ID && (
         <script
           async
           defer
-          data-website-id="c9acb2df-b94e-4bc5-a0c6-050d75da55c4"
+          data-website-id={import.meta.env.PUBLIC_UMAMI_WEBSITE_ID}
           src="https://tools.gdm.dev/espeon/u/cdn"
         />
       )
     }
-    <script>
-      import LogRocket from 'logrocket'
+    {
+      import.meta.env.PUBLIC_LOGROCKET_PROJECT_ID && (
+        <script>
+          import LogRocket from 'logrocket'
 
-      const projectId = import.meta.env.PUBLIC_LOGROCKET_PROJECT_ID
+          const projectId = import.meta.env.PUBLIC_LOGROCKET_PROJECT_ID
 
-      if (projectId) {
-        LogRocket.init(projectId, {
-          ingestServer: 'https://tools.gdm.dev/espeon/lr/data',
-        })
-      }
-    </script>
+          LogRocket.init(projectId, {
+            ingestServer: 'https://tools.gdm.dev/espeon/lr/data',
+          })
+        </script>
+      )
+    }
   </head>
   <body>
     <header class="mx-12 my-4 flex justify-around items-center">
