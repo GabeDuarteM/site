@@ -21,17 +21,17 @@ const techs = [
   <div
     class="text-4xl text-center font-['Montserrat'] w-[75vw] min-h-[400px] h-[66vh] items-center justify-center flex whitespace-pre-wrap"
   >
-    <span id="textTyped">{`Hey! I'm Gabriel Duarte.\nYour friendly neighborhood developer.`}</span>
+    <span id="textTyped"></span>
   </div>
   <script>
-    const textTyped = document.getElementById('textTyped')
+    const nodeToType = document.getElementById('textTyped')
 
-    if (!textTyped) {
+    if (!nodeToType) {
       throw new Error("Whoops, this shouldn't happen, the textTyped was not found")
     }
 
-    const fullText = textTyped.innerText
-    textTyped.innerHTML = ''
+    const fullText = `Hey! I'm Gabriel Duarte.\nYour friendly neighborhood developer.`
+    nodeToType.innerHTML = ''
 
     interface TypewriterPauses {
       [keyof: string]: number
@@ -47,7 +47,7 @@ const techs = [
     const typeWriter = () => {
       if (i < fullText.length) {
         setTimeout(typeWriter, customPauses[fullText.charAt(i)] || 35)
-        textTyped.textContent += fullText.charAt(i)
+        nodeToType.textContent += fullText.charAt(i)
         i++
       }
     }
