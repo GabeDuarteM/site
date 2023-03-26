@@ -15,22 +15,28 @@ const techs = [
   { name: 'jest', href: 'https://jestjs.io/' },
   { name: 'electron', href: 'https://electronjs.org/' },
 ]
+
+const fullText = `Hey! I'm Gabriel Duarte.\nYour friendly neighborhood developer.`
 ---
 
 <Layout title="Gabriel Duarte">
   <div
-    class="text-4xl text-center font-['Montserrat'] w-[75vw] min-h-[400px] h-[66vh] items-center justify-center flex whitespace-pre-wrap"
+    class="text-4xl text-center font-['Montserrat'] w-[75vw] min-h-[400px] h-[66vh] flex-row items-center justify-center flex whitespace-pre-wrap"
   >
-    <span id="textTyped"></span>
+    <noscript>{fullText}</noscript>
+    <span class="hidden" id="textTyped"><span></span><span id="postTextTyped" class="opacity-0">{fullText}</span></span>
   </div>
   <script>
-    const nodeToType = document.getElementById('textTyped')
+    const nodeToType = document.querySelector('#textTyped span')
+    const nodeToHide = document.querySelector('#postTextTyped')
 
-    if (!nodeToType) {
+    if (!nodeToType || !nodeToHide) {
       throw new Error("Whoops, this shouldn't happen, the textTyped was not found")
     }
 
-    const fullText = `Hey! I'm Gabriel Duarte.\nYour friendly neighborhood developer.`
+    nodeToType.parentElement?.classList.remove('hidden')
+
+    const fullText = nodeToHide.textContent || ''
     nodeToType.innerHTML = ''
 
     interface TypewriterPauses {
@@ -48,6 +54,7 @@ const techs = [
       if (i < fullText.length) {
         setTimeout(typeWriter, customPauses[fullText.charAt(i)] || 35)
         nodeToType.textContent += fullText.charAt(i)
+        nodeToHide.textContent = fullText.substring(i + 1)
         i++
       }
     }
