@@ -1,0 +1,22 @@
+name: CI
+
+on: push
+
+env:
+  CI: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run CI script
+        run: pnpm run ci

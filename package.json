@@ -1,15 +1,16 @@
 {
-  "name": "@example/basics",
+  "name": "site",
   "type": "module",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "check": "tsc --noEmit && eslint . --ext .js,.jsx,.ts,.tsx,.astro && prettier --check --plugin-search-dir=. ."
+    "check": "tsc --noEmit && eslint . --ext .js,.jsx,.ts,.tsx,.astro && prettier --check --plugin-search-dir=. .",
+    "check-no-prettier": "tsc --noEmit && eslint . --ext .js,.jsx,.ts,.tsx,.astro",
+    "ci": "pnpm run check-no-prettier && pnpm run build"
   },
   "dependencies": {
     "@astrojs/tailwind": "^3.1.1",
