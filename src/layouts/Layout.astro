@@ -1,0 +1,114 @@
+---
+import GithubLink from './GithubLink.astro'
+import LinkedinLink from './LinkedinLink.astro'
+
+export interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+          Droid Sans, Helvetica Neue, sans-serif;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      @layer base {
+        html {
+          background: theme('colors.bgColor');
+          @apply text-violet-300;
+        }
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+
+    <meta
+      name="description"
+      content="Software developer, nerd, gamer. Gabriel is a curious person from Brazil, currently living in Germany. He loves helping organizations to build ambitious and well structured web projects. Sometimes, he also writes in the third person."
+    />
+    <meta name="twitter:image" content="https://gabrielduarte.dev/twitter.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@GabeDuarteM" />
+    <meta property="og:title" content="Gabriel Duarte" />
+    <meta
+      property="og:description"
+      content="Software developer, nerd, gamer. Gabriel is a curious person from Brazil, currently living in Germany. He loves helping organizations to build ambitious and well structured web projects. Sometimes, he also writes in the third person."
+    />
+    <meta name="og:image" content="https://gabrielduarte.dev/twitter.png" />
+    <meta name="theme-color" content="#1b0843" />
+
+    <title>{title}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    {
+      import.meta.env.PUBLIC_UMAMI_WEBSITE_ID && (
+        <script
+          async
+          defer
+          data-website-id={import.meta.env.PUBLIC_UMAMI_WEBSITE_ID}
+          src="https://tools.gdm.dev/espeon/u/cdn"
+        />
+      )
+    }
+    {
+      import.meta.env.PUBLIC_LOGROCKET_PROJECT_ID && (
+        <script>
+          import LogRocket from 'logrocket'
+
+          const projectId = import.meta.env.PUBLIC_LOGROCKET_PROJECT_ID
+
+          LogRocket.init(projectId, {
+            ingestServer: 'https://tools.gdm.dev/espeon/lr/data',
+          })
+        </script>
+      )
+    }
+  </head>
+  <body>
+    <header class="mx-12 my-4 flex justify-around items-center">
+      <GithubLink />
+      <a
+        href="/"
+        class="text-[21px] font-thin border-b-violet-300 border-b-2 w-24 pb-1 text-center cursor-pointer select-none leading-tight font-['Montserrat']"
+      >
+        Gabriel
+        <div class="font-medium -mt-1">Duarte</div>
+      </a>
+      <LinkedinLink />
+    </header>
+    <main class="flex items-center justify-center flex-col">
+      <slot />
+    </main>
+    <footer class="flex items-center justify-center my-10 space-x-8">
+      <GithubLink />
+      <LinkedinLink />
+    </footer>
+  </body>
+</html>

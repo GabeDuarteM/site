@@ -1,0 +1,14 @@
+---
+import ExternalLink from './ExternalLink.astro'
+
+export interface SocialMediaIconProps {
+  href: string
+  'aria-label': string
+}
+
+const { href, ...props } = Astro.props
+---
+
+<ExternalLink href={href} {...props}>
+  <slot />
+</ExternalLink>
