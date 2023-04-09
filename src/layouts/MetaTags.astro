@@ -1,0 +1,69 @@
+---
+export interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+<meta
+  name="description"
+  content="Software developer, nerd, gamer. Gabriel is a curious person from Brazil, currently living in Germany. He loves helping organizations to build ambitious and well structured web projects. Sometimes, he also writes in the third person."
+/>
+<meta name="twitter:image" content="https://gabrielduarte.dev/twitter.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@GabeDuarteM" />
+<meta property="og:title" content="Gabriel Duarte" />
+<meta
+  property="og:description"
+  content="Software developer, nerd, gamer. Gabriel is a curious person from Brazil, currently living in Germany. He loves helping organizations to build ambitious and well structured web projects. Sometimes, he also writes in the third person."
+/>
+<meta name="og:image" content="https://gabrielduarte.dev/twitter.png" />
+<meta name="theme-color" content="#1b0843" />
+
+<title>{title}</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap"
+  rel="preload"
+  as="style"
+  onload="this.onload=null;this.rel='stylesheet'"
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+  rel="stylesheet"
+  rel="preload"
+  as="style"
+  onload="this.onload=null;this.rel='stylesheet'"
+/>
+<noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+</noscript>
+{
+  import.meta.env.PUBLIC_UMAMI_WEBSITE_ID && (
+    <script
+      async
+      defer
+      data-website-id={import.meta.env.PUBLIC_UMAMI_WEBSITE_ID}
+      src="https://tools.gdm.dev/espeon/u/cdn"
+    />
+  )
+}
+<script>
+  import LogRocket from 'logrocket'
+
+  const projectId = import.meta.env.PUBLIC_LOGROCKET_PROJECT_ID
+
+  if (projectId) {
+    LogRocket.init(projectId, {
+      ingestServer: 'https://tools.gdm.dev/espeon/lr/data',
+    })
+  }
+</script>
