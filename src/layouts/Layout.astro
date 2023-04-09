@@ -94,7 +94,7 @@ const { title } = Astro.props
       }
     </script>
   </head>
-  <body class="h-screen w-screen max-w-screen-xl mx-auto">
+  <body class="h-screen relative w-screen max-w-screen-xl mx-auto min-h-[300px]">
     <div class="pointer-events-none absolute w-[100px] h-[100px] sm:w-[300px] sm:h-[300px]">
       <div class="absolute flex w-full">
         <div
@@ -123,7 +123,7 @@ const { title } = Astro.props
           G<span class="font-medium">D</span>
           <div class="border-b-zinc-300 border-b-2"></div>
         </a>
-        <div class="ml-auto"></div>
+        <div class="ml-auto min-w-[30px]"></div>
         <div class="flex gap-6 mt-2">
           <GithubLink />
           <LinkedinLink />
@@ -131,5 +131,21 @@ const { title } = Astro.props
       </div>
     </header>
     <main></main>
+    <div
+      class="pointer-events-none rotate-180 hidden sm:block absolute bottom-0 right-0 w-[100px] h-[100px] sm:w-[300px] sm:h-[300px]"
+    >
+      <div class="absolute flex flex-col h-full">
+        <div
+          class="h-full border-l-8 border-b-8 sm:border-l-[20px] sm:border-b-[20px] border-l-zinc-300 border-b-zinc-900 rounded-t-3xl"
+        >
+        </div>
+      </div>
+      <div class="absolute flex w-full">
+        <div
+          class="w-full border-t-8 border-r-8 sm:border-t-[20px] sm:border-r-[20px] border-t-zinc-300 border-r-zinc-900 rounded-l-3xl"
+        >
+        </div>
+      </div>
+    </div>
   </body>
 </html>
