@@ -10,7 +10,7 @@ const { title } = Astro.props
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html class="bg-zinc-900" lang="en">
   <head>
     <style>
       @tailwind base;
@@ -25,26 +25,16 @@ const { title } = Astro.props
           Droid Sans, Helvetica Neue, sans-serif;
       }
 
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
       @layer base {
         html {
-          background: theme('colors.bgColor');
-          @apply text-violet-300;
+          /* background: theme('colors.bgColor'); */
+          @apply text-zinc-300;
         }
       }
     </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <meta name="generator" content={Astro.generator} />
 
     <meta
       name="description"
@@ -104,24 +94,42 @@ const { title } = Astro.props
       }
     </script>
   </head>
-  <body>
-    <header class="mx-12 my-4 flex justify-around items-center">
-      <GithubLink />
-      <a
-        href="/"
-        class="text-[21px] font-thin border-b-violet-300 border-b-2 w-24 pb-1 text-center cursor-pointer select-none leading-tight font-['Montserrat']"
-      >
-        Gabriel
-        <div class="font-medium -mt-1">Duarte</div>
-      </a>
-      <LinkedinLink />
+  <body class="h-screen w-screen max-w-screen-xl mx-auto">
+    <div class="pointer-events-none absolute w-[100px] h-[100px] sm:w-[300px] sm:h-[300px]">
+      <div class="absolute flex w-full">
+        <div
+          class="w-full border-t-8 border-r-8 sm:border-t-[20px] sm:border-r-[20px] border-t-zinc-300 border-r-zinc-900 rounded-l-3xl"
+        >
+        </div>
+        <span class="flex gap-0.5 sm:hidden -ml-[1px] -mt-px">
+          <div class="rotate-45 h-2.5 w-0.5 bg-zinc-300"></div>
+          <div class="rotate-45 h-2.5 w-0.5 bg-zinc-300"></div>
+        </span>
+      </div>
+      <div class="absolute flex flex-col h-full">
+        <div
+          class="h-full border-l-8 border-b-8 sm:border-l-[20px] sm:border-b-[20px] border-l-zinc-300 border-b-zinc-900 rounded-t-3xl"
+        >
+        </div>
+        <span class="flex flex-col gap-0.5 sm:hidden -ml-px -mt-[1px]">
+          <div class="-rotate-45 w-2.5 h-0.5 bg-zinc-300"></div>
+          <div class="-rotate-45 w-2.5 h-0.5 bg-zinc-300"></div>
+        </span>
+      </div>
+    </div>
+    <header>
+      <div class="p-8 sm:p-12 flex">
+        <a href="/" class="text-3xl sm:text-4xl font-thin text-center font-['Montserrat']">
+          G<span class="font-medium">D</span>
+          <div class="border-b-zinc-300 border-b-2"></div>
+        </a>
+        <div class="ml-auto"></div>
+        <div class="flex gap-6 mt-2">
+          <GithubLink />
+          <LinkedinLink />
+        </div>
+      </div>
     </header>
-    <main class="flex items-center justify-center flex-col">
-      <slot />
-    </main>
-    <footer class="flex items-center justify-center my-10 space-x-8">
-      <GithubLink />
-      <LinkedinLink />
-    </footer>
+    <main></main>
   </body>
 </html>
