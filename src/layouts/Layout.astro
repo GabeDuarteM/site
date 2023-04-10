@@ -15,7 +15,7 @@ const { title } = Astro.props
 <!DOCTYPE html>
 <html class="bg-zinc-900" lang="en">
   <head>
-    <style>
+    <style is:global>
       @tailwind base;
       @tailwind components;
       @tailwind utilities;
@@ -30,8 +30,13 @@ const { title } = Astro.props
 
       @layer base {
         html {
-          /* background: theme('colors.bgColor'); */
           @apply text-zinc-300;
+        }
+      }
+
+      @layer utilities {
+        .gradient {
+          @apply from-violet-500 to-green-500;
         }
       }
     </style>
@@ -43,7 +48,7 @@ const { title } = Astro.props
       <div class="p-8 sm:p-12 flex">
         <a href="/" class="text-3xl sm:text-4xl font-thin text-center font-['Montserrat']">
           G<span class="font-medium">D</span>
-          <div class="border-b-zinc-300 border-b-2"></div>
+          <div class="bg-gradient-to-r gradient h-0.5"></div>
         </a>
         <div class="ml-auto min-w-[30px]"></div>
         <div class="flex items-center justify-center gap-6 mt-2">
@@ -53,7 +58,7 @@ const { title } = Astro.props
         </div>
       </div>
     </header>
-    <main><slot /></main>
+    <main></main>
     <FancyBorder place="bottom" />
   </body>
 </html>

@@ -8,31 +8,27 @@ const { place = 'top' } = Astro.props
 
 <div
   class={`${
-    place === 'bottom' ? 'rotate-180 bottom-0 right-0 ' : ''
+    place === 'bottom' ? 'rotate-180 right-0 hidden sm:block ' : ''
   }pointer-events-none absolute w-[100px] h-[100px] sm:w-[300px] sm:h-[300px]`}
 >
   <div class="absolute flex w-full">
     <div
-      class="w-full border-t-8 border-r-8 sm:border-t-[20px] sm:border-r-[20px] border-t-zinc-300 border-r-transparent rounded-l-3xl"
+      class="w-full h-2 overflow-hidden bg-gradient-to-r gradient to-green-500 flex justify-end sm:h-5 rounded-l-3xl"
     >
+      <div class="rotate-45 w-2 h-5 sm:w-5 sm:h-12 bg-zinc-900"></div>
     </div>
     <span class="flex gap-0.5 sm:hidden -ml-[1px] -mt-px">
-      <div class="rotate-45 h-2.5 w-0.5 bg-zinc-300"></div>
-      <div class="rotate-45 h-2.5 w-0.5 bg-zinc-300"></div>
+      <div class="rotate-45 h-2.5 w-0.5 bg-green-400"></div>
+      <div class="rotate-45 h-2.5 w-0.5 bg-green-400"></div>
     </span>
   </div>
   <div class="absolute flex flex-col h-full">
-    <div
-      class="h-full border-l-8 border-b-8 sm:border-l-[20px] sm:border-b-[20px] border-l-zinc-300 border-b-transparent rounded-t-3xl"
-    >
+    <div class="h-full w-2 overflow-hidden bg-gradient-to-b gradient flex items-end sm:w-5 rounded-t-3xl">
+      <div class="rotate-45 -mb-3 w-2 h-5 sm:-mb-5 sm:w-5 sm:h-12 bg-zinc-900"></div>
     </div>
-    {
-      place === 'top' && (
-        <span class="flex flex-col gap-0.5 sm:hidden -ml-px -mt-[1px]">
-          <div class="-rotate-45 w-2.5 h-0.5 bg-zinc-300" />
-          <div class="-rotate-45 w-2.5 h-0.5 bg-zinc-300" />
-        </span>
-      )
-    }
+    <span class="flex flex-col gap-0.5 sm:hidden -ml-px -mt-[1px]">
+      <div class="-rotate-45 w-2.5 h-0.5 bg-green-400"></div>
+      <div class="-rotate-45 w-2.5 h-0.5 bg-green-400"></div>
+    </span>
   </div>
 </div>
