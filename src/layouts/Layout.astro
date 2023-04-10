@@ -1,4 +1,5 @@
 ---
+import EmailLink from './EmailLink.astro'
 import FancyBorder from './FancyBorder.astro'
 import GithubLink from './GithubLink.astro'
 import LinkedinLink from './LinkedinLink.astro'
@@ -45,7 +46,8 @@ const { title } = Astro.props
           <div class="border-b-zinc-300 border-b-2"></div>
         </a>
         <div class="ml-auto min-w-[30px]"></div>
-        <div class="flex gap-6 mt-2">
+        <div class="flex items-center justify-center gap-6 mt-2">
+          <EmailLink />
           <GithubLink />
           <LinkedinLink />
         </div>
