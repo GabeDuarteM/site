@@ -42,7 +42,7 @@ const { title } = Astro.props
     </style>
     <MetaTags title={title} />
   </head>
-  <body class="h-screen relative w-screen max-w-screen-xl mx-auto min-h-[300px]">
+  <body class="relative max-w-screen-xl mx-auto overflow-x-hidden">
     <FancyBorder />
     <header>
       <div class="p-8 sm:p-12 flex">
@@ -58,7 +58,7 @@ const { title } = Astro.props
         </div>
       </div>
     </header>
-    <main></main>
+    <main><slot /></main>
     <FancyBorder place="bottom" />
   </body>
 </html>

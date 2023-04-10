@@ -20,75 +20,58 @@ const fullText = `Hey! I'm Gabriel Duarte.\nYour friendly neighborhood developer
 ---
 
 <Layout title="Gabriel Duarte">
-  <div
-    class="text-4xl text-center font-['Montserrat'] w-[75vw] min-h-[400px] h-[66vh] flex-row items-center justify-center flex whitespace-pre-wrap"
-  >
-    <noscript>{fullText}</noscript>
-    <span class="hidden" id="textTyped"><span></span><span id="postTextTyped" class="opacity-0">{fullText}</span></span>
-  </div>
-  <script>
-    const nodeToType = document.querySelector('#textTyped span')
-    const nodeToHide = document.querySelector('#postTextTyped')
+  <div class="flex items-center justify-center flex-col">
+    <div
+      class="text-4xl text-center font-['Montserrat'] flex-row items-center mx-14 my-4 justify-center flex whitespace-pre-wrap"
+    >
+      <noscript>{fullText}</noscript>
+      <span class="hidden" id="textTyped"
+        ><span></span><span id="postTextTyped" class="opacity-0">{fullText}</span></span
+      >
+    </div>
+    <script>
+      const nodeToType = document.querySelector('#textTyped span')
+      const nodeToHide = document.querySelector('#postTextTyped')
 
-    if (!nodeToType || !nodeToHide) {
-      throw new Error("Whoops, this shouldn't happen, the textTyped was not found")
-    }
-
-    nodeToType.parentElement?.classList.remove('hidden')
-
-    const fullText = nodeToHide.textContent || ''
-    nodeToType.innerHTML = ''
-
-    interface TypewriterPauses {
-      [keyof: string]: number
-    }
-
-    const customPauses: TypewriterPauses = {
-      '!': 200,
-      '.': 600,
-    }
-
-    let i = 0
-
-    const typeWriter = () => {
-      if (i < fullText.length) {
-        setTimeout(typeWriter, customPauses[fullText.charAt(i)] || 35)
-        nodeToType.textContent += fullText.charAt(i)
-        nodeToHide.textContent = fullText.substring(i + 1)
-        i++
+      if (!nodeToType || !nodeToHide) {
+        throw new Error("Whoops, this shouldn't happen, the textTyped was not found")
       }
-    }
-    typeWriter()
-  </script>
 
-  <div class="text-lg flex flex-col items-center w-[75vw] max-w-[900px]">
-    <p class="text-justify my-4">
-      {"I'm"} a Javascript developer born in Brazil, graduated in Information Systems and now currently living in Hamburg,
-      Germany.
-    </p>
-    <p class="text-justify my-4">
-      {"I'm"} a very positive person, always looking out for a light and flexible environment, good conversations, and good
-      music. On my free time, I like to play guitar, watch TV shows and movies, play some games and, of course, to code.
-      Be sure to check my repositories on{' '}
-      <ExternalLink href="https://www.github.com/GabeDuarteM">GitHub</ExternalLink>. Maybe you will find something of
-      your liking{' '}
-      <span role="img" aria-label="Emoji of winking face with tongue sticking out"> 😜</span>.
-    </p>
-    <p class="text-justify my-4">
-      I normally do things with{' '}
-      {
-        techs.map((tech) => (
-          <span>
-            <ExternalLink href={tech.href}>{tech.name}</ExternalLink>,{' '}
-          </span>
-        ))
-      }and basically any other technology that simplifies the development workflow, or that adds value to the user
-      experience.
-    </p>
-    <p class="text-justify my-4">
-      One of the traits I think that defines me the most, is curiosity. Because of it, {"I'm"} always looking for new things,
-      pushing myself further, learning about new technologies, and looking for ways to do the things I already do, but in
-      a better way.
-    </p>
+      nodeToType.parentElement?.classList.remove('hidden')
+
+      const fullText = nodeToHide.textContent || ''
+      nodeToType.innerHTML = ''
+
+      interface TypewriterPauses {
+        [keyof: string]: number
+      }
+
+      const customPauses: TypewriterPauses = {
+        '!': 200,
+        '.': 300,
+      }
+
+      let i = 0
+
+      const typeWriter = () => {
+        if (i < fullText.length) {
+          setTimeout(typeWriter, customPauses[fullText.charAt(i)] || 35)
+          nodeToType.textContent += fullText.charAt(i)
+          nodeToHide.textContent = fullText.substring(i + 1)
+          i++
+        }
+      }
+      typeWriter()
+    </script>
+
+    <div class="text-lg flex flex-col justify-center max-w-screen-sm items-center mx-14">
+      <p class="text-justify my-4">
+        <ul class="list-disc">
+          <li>Front-end developer born in Brazil, and based in Hamburg, Germany.</li>
+          <li>Always looking out for good talks and good music.</li>
+          <li>Passionate about cutting-edge, pixel-perfect and beautiful interfaces.</li>
+        </ul>
+      </p>
+    </div>
   </div>
 </Layout>
