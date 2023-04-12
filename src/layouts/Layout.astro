@@ -42,23 +42,27 @@ const { title } = Astro.props
     </style>
     <MetaTags title={title} />
   </head>
-  <body class="relative max-w-screen-xl mx-auto overflow-x-hidden">
-    <FancyBorder />
-    <header>
-      <div class="p-8 sm:p-12 flex">
-        <a href="/" class="text-3xl sm:text-4xl font-thin text-center font-['Montserrat']">
-          G<span class="font-medium">D</span>
-          <div class="bg-gradient-to-r gradient h-0.5"></div>
-        </a>
-        <div class="ml-auto min-w-[30px]"></div>
-        <div class="flex items-center justify-center gap-6 mt-2">
-          <EmailLink />
-          <GithubLink />
-          <LinkedinLink />
+  <body
+    class="max-w-screen-xl mx-auto overflow-x-hidden md:flex md:items-center md:justify-center md:h-screen md:w-screen md:-mt-20"
+  >
+    <div class="relative">
+      <FancyBorder />
+      <header>
+        <div class="p-8 sm:p-12 flex">
+          <a href="/" class="text-3xl sm:text-4xl font-thin text-center select-none font-['Montserrat']">
+            G<span class="font-medium">D</span>
+            <div class="bg-gradient-to-r gradient h-0.5"></div>
+          </a>
+          <div class="ml-auto min-w-[30px]"></div>
+          <div class="flex items-center justify-center gap-6 mt-2">
+            <EmailLink />
+            <GithubLink />
+            <LinkedinLink />
+          </div>
         </div>
-      </div>
-    </header>
-    <main><slot /></main>
-    <FancyBorder place="bottom" />
+      </header>
+      <main><slot /></main>
+      <FancyBorder place="bottom" />
+    </div>
   </body>
 </html>

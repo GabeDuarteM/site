@@ -1,26 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import ExternalLink from '../components/ExternalLink.astro'
-
-const techs = [
-  { name: 'react', href: 'https://reactjs.org/' },
-  { name: 'node', href: 'https://nodejs.org/en/' },
-  { name: 'typescript', href: 'https://www.typescriptlang.org/' },
-  { name: 'prettier', href: 'https://prettier.io/' },
-  { name: 'eslint', href: 'https://eslint.org/' },
-  {
-    name: 'react-testing-library',
-    href: 'https://github.com/kentcdodds/react-testing-library',
-  },
-  { name: 'jest', href: 'https://jestjs.io/' },
-  { name: 'electron', href: 'https://electronjs.org/' },
-]
 
 const fullText = `Hey! I'm Gabriel Duarte.\nYour friendly neighborhood developer.`
 ---
 
 <Layout title="Gabriel Duarte">
-  <div class="flex items-center justify-center flex-col">
+  <div class="flex items-center justify-center flex-col md:mx-14">
     <div
       class="text-4xl text-center font-['Montserrat'] flex-row items-center mx-14 my-4 justify-center flex whitespace-pre-wrap"
     >
