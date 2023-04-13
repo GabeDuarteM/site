@@ -4,24 +4,21 @@ export interface Props {
 }
 
 const { title } = Astro.props
+
+const description =
+  'Software developer, nerd, gamer. Gabriel is a curious developer from Brazil, currently living in Germany. He loves helping organizations to build ambitious and well structured web projects. Sometimes, he also writes in the third person.'
 ---
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-<meta
-  name="description"
-  content="Software developer, nerd, gamer. Gabriel is a curious person from Brazil, currently living in Germany. He loves helping organizations to build ambitious and well structured web projects. Sometimes, he also writes in the third person."
-/>
+<meta name="description" content={description} />
 <meta name="twitter:image" content="https://gabrielduarte.dev/twitter.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:creator" content="@GabeDuarteM" />
 <meta property="og:title" content="Gabriel Duarte" />
-<meta
-  property="og:description"
-  content="Software developer, nerd, gamer. Gabriel is a curious person from Brazil, currently living in Germany. He loves helping organizations to build ambitious and well structured web projects. Sometimes, he also writes in the third person."
-/>
+<meta property="og:description" content={description} />
 <meta name="og:image" content="https://gabrielduarte.dev/twitter.png" />
 <meta name="theme-color" content="#1b0843" />
 
