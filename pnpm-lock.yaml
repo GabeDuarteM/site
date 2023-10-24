@@ -127,7 +127,7 @@ packages:
       dset: 3.1.2
       is-docker: 3.0.0
       is-wsl: 3.1.0
-      undici: 5.25.3
+      undici: 5.26.5
       which-pm-runs: 1.1.0
     transitivePeerDependencies:
       - supports-color
@@ -1386,7 +1386,7 @@ packages:
       string-width: 6.1.0
       strip-ansi: 7.1.0
       tsconfig-resolver: 3.0.1
-      undici: 5.25.3
+      undici: 5.26.5
       unist-util-visit: 4.1.2
       vfile: 5.3.7
       vite: 4.4.9(@types/node@20.8.7)
@@ -4813,8 +4813,8 @@ packages:
   /undici-types@5.25.3:
     resolution: {integrity: sha512-Ga1jfYwRn7+cP9v8auvEXN1rX3sWqlayd4HP7OKk4mZWylEmu3KzXDUGrQUN6Ol7qo1gPvB2e5gX6udnyEPgdA==}
 
-  /undici@5.25.3:
-    resolution: {integrity: sha512-7lmhlz3K1+IKB6IUjkdzV2l0jKY8/0KguEMdEpzzXCug5pEGIp3DxUg0DEN65DrVoxHiRKpPORC/qzX+UglSkQ==}
+  /undici@5.26.5:
+    resolution: {integrity: sha512-cSb4bPFd5qgR7qr2jYAi0hlX9n5YKK2ONKkLFkxl+v/9BvC0sOpZjBHDBSXc5lWAf5ty9oZdRXytBIHzgUcerw==}
     engines: {node: '>=14.0'}
     dependencies:
       '@fastify/busboy': 2.0.0
