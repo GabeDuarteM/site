@@ -12,8 +12,8 @@ dependencies:
     specifier: 3.6.0
     version: 3.6.0(@types/node@20.11.16)(typescript@5.3.3)
   logrocket:
-    specifier: 7.0.0
-    version: 7.0.0
+    specifier: 8.0.0
+    version: 8.0.0
   tailwindcss:
     specifier: 3.3.5
     version: 3.3.5
@@ -3277,8 +3277,8 @@ packages:
       is-unicode-supported: 1.3.0
     dev: false
 
-  /logrocket@7.0.0:
-    resolution: {integrity: sha512-IvM4RKYTAByljKTWCx/Q+58Nvt4Dmf/0PIHLfall3kqDtxiDSVKSzu3/bvGb3riHE/C7xY3wzLxy6v+Wui1NUQ==}
+  /logrocket@8.0.0:
+    resolution: {integrity: sha512-kuMdWvEvK3s3rnFiKJdnMfNtLux3QHaXOQ6YQa/mu323fY24rAQA5xA66WRzZsRdjgstR88C+aYfqQFm235Y5A==}
     dev: false
 
   /longest-streak@3.1.0:
