@@ -10,7 +10,7 @@ dependencies:
     version: 5.0.2(astro@3.6.0)(tailwindcss@3.3.5)
   astro:
     specifier: 3.6.0
-    version: 3.6.0(@types/node@20.11.30)(typescript@5.4.3)
+    version: 3.6.0(@types/node@20.12.2)(typescript@5.4.3)
   logrocket:
     specifier: 8.1.0
     version: 8.1.0
@@ -20,8 +20,8 @@ dependencies:
 
 devDependencies:
   '@types/node':
-    specifier: 20.11.30
-    version: 20.11.30
+    specifier: 20.12.2
+    version: 20.12.2
   '@typescript-eslint/eslint-plugin':
     specifier: 7.4.0
     version: 7.4.0(@typescript-eslint/parser@7.4.0)(eslint@8.57.0)(typescript@5.4.3)
@@ -87,7 +87,7 @@ packages:
       astro: ^3.0.0
     dependencies:
       '@astrojs/prism': 3.0.0
-      astro: 3.6.0(@types/node@20.11.30)(typescript@5.4.3)
+      astro: 3.6.0(@types/node@20.12.2)(typescript@5.4.3)
       github-slugger: 2.0.0
       import-meta-resolve: 3.0.0
       mdast-util-definitions: 6.0.0
@@ -118,7 +118,7 @@ packages:
       astro: ^3.2.4
       tailwindcss: ^3.0.24
     dependencies:
-      astro: 3.6.0(@types/node@20.11.30)(typescript@5.4.3)
+      astro: 3.6.0(@types/node@20.12.2)(typescript@5.4.3)
       autoprefixer: 10.4.16(postcss@8.4.31)
       postcss: 8.4.31
       postcss-load-config: 4.0.1(postcss@8.4.31)
@@ -965,8 +965,8 @@ packages:
       '@types/unist': 2.0.9
     dev: false
 
-  /@types/node@20.11.30:
-    resolution: {integrity: sha512-dHM6ZxwlmuZaRmUPfv1p+KrdD1Dci04FbdEm/9wEMouFqxYoFl5aMkt0VMAUtYRQDyYvD41WJLukhq/ha3YuTw==}
+  /@types/node@20.12.2:
+    resolution: {integrity: sha512-zQ0NYO87hyN6Xrclcqp7f8ZbXNbRfoGWNcMvHTPQp9UUrwI0mI7XBz+cu7/W6/VClYo2g63B0cjull/srU7LgQ==}
     dependencies:
       undici-types: 5.26.5
 
@@ -1310,7 +1310,7 @@ packages:
       - supports-color
     dev: true
 
-  /astro@3.6.0(@types/node@20.11.30)(typescript@5.4.3):
+  /astro@3.6.0(@types/node@20.12.2)(typescript@5.4.3):
     resolution: {integrity: sha512-mRDzWXsaSBaN+juvunO4Ukq8HQ1WqrULlcZfKzaKEZEXvxiWmMKN9tH0onQH0EaQ7+f4nNR4VN9kYTM26uMrXQ==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
@@ -1368,7 +1368,7 @@ packages:
       tsconfck: 3.0.0(typescript@5.4.3)
       unist-util-visit: 4.1.2
       vfile: 5.3.7
-      vite: 4.5.0(@types/node@20.11.30)
+      vite: 4.5.0(@types/node@20.12.2)
       vitefu: 0.2.5(vite@4.5.0)
       which-pm: 2.1.1
       yargs-parser: 21.1.1
@@ -5297,7 +5297,7 @@ packages:
       vfile-message: 4.0.2
     dev: false
 
-  /vite@4.5.0(@types/node@20.11.30):
+  /vite@4.5.0(@types/node@20.12.2):
     resolution: {integrity: sha512-ulr8rNLA6rkyFAlVWw2q5YJ91v098AFQ2R0PRFwPzREXOUJQPtFUG0t+/ZikhaOCDqFoDhN6/v8Sq0o4araFAw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -5325,7 +5325,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.11.30
+      '@types/node': 20.12.2
       esbuild: 0.18.20
       postcss: 8.4.31
       rollup: 3.29.4
@@ -5341,7 +5341,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.5.0(@types/node@20.11.30)
+      vite: 4.5.0(@types/node@20.12.2)
     dev: false
 
   /web-namespaces@2.0.1:
