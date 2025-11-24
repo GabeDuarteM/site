@@ -10,19 +10,21 @@ const fullText = `Hey! I'm Gabriel Duarte.\nYour friendly neighborhood developer
       class="text-4xl text-center font-['Montserrat'] flex-row items-center mx-14 my-4 justify-center flex whitespace-pre-wrap"
     >
       <noscript>{fullText}</noscript>
-      <span class="hidden" id="textTyped"
-        ><span></span><span id="postTextTyped" class="opacity-0">{fullText}</span></span
-      >
+      <span class="relative inline-flex" id="textTyped">
+        <span class="absolute inset-0"
+          ><span id="typedText"></span>
+          <span id="postTextTyped" class="sr-only">{fullText}</span>
+        </span>
+        <span class="invisible select-none" aria-hidden="true" role="presentation">{fullText}</span>
+      </span>
     </div>
     <script>
-      const nodeToType = document.querySelector('#textTyped span')
+      const nodeToType = document.querySelector('#typedText')
       const nodeToHide = document.querySelector('#postTextTyped')
 
       if (!nodeToType || !nodeToHide) {
         throw new Error("Whoops, this shouldn't happen, the textTyped was not found")
       }
-
-      nodeToType.parentElement?.classList.remove('hidden')
 
       const fullText = nodeToHide.textContent || ''
       nodeToType.innerHTML = ''
