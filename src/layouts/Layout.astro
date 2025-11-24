@@ -4,6 +4,7 @@ import FancyBorder from './FancyBorder.astro'
 import GithubLink from './GithubLink.astro'
 import LinkedinLink from './LinkedinLink.astro'
 import MetaTags from './MetaTags.astro'
+import '../styles/global.css'
 
 export interface Props {
   title: string
@@ -12,46 +13,19 @@ export interface Props {
 const { title } = Astro.props
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html class="bg-zinc-900" lang="en">
   <head>
-    <style is:global>
-      @tailwind base;
-      @tailwind components;
-      @tailwind utilities;
-
-      html,
-      body {
-        padding: 0;
-        margin: 0;
-        font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
-          Droid Sans, Helvetica Neue, sans-serif;
-      }
-
-      @layer base {
-        html {
-          @apply text-zinc-300;
-        }
-      }
-
-      @layer utilities {
-        .gradient {
-          @apply from-violet-500 to-green-500;
-        }
-      }
-    </style>
     <MetaTags title={title} />
   </head>
-  <body
-    class="max-w-screen-xl mx-auto overflow-x-hidden md:flex md:items-center md:justify-center md:h-screen md:w-screen md:-mt-20"
-  >
+  <body class="mx-auto overflow-x-hidden md:flex md:items-center md:justify-center md:h-screen md:w-screen md:-mt-20!">
     <div class="relative">
       <FancyBorder />
       <header>
         <div class="p-8 sm:p-12 flex">
           <a href="/" class="text-3xl sm:text-4xl font-thin text-center select-none font-['Montserrat']">
             G<span class="font-medium">D</span>
-            <div class="bg-gradient-to-r gradient h-0.5"></div>
+            <div class="bg-linear-to-r from-violet-500 to-green-500 h-0.5"></div>
           </a>
           <div class="ml-auto min-w-[30px]"></div>
           <div class="flex items-center justify-center gap-6 mt-2">

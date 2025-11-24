@@ -12,21 +12,19 @@ const { place = 'top' } = Astro.props
   }pointer-events-none absolute w-[100px] h-[100px] sm:w-[300px] sm:h-[300px]`}
 >
   <div class="absolute flex w-full">
-    <div
-      class="w-full h-2 overflow-hidden bg-gradient-to-r gradient to-green-500 flex justify-end sm:h-5 rounded-l-3xl"
-    >
+    <div class="w-full h-2 overflow-hidden bg-linear-to-r gradient to-green-500 flex justify-end sm:h-5 rounded-l-3xl">
       <div class="rotate-45 w-2 h-5 sm:w-5 sm:h-12 bg-zinc-900"></div>
     </div>
-    <span class="flex gap-0.5 sm:hidden -ml-[1px] -mt-px">
+    <span class="flex gap-0.5 sm:hidden -ml-px -mt-px">
       <div class="rotate-45 h-2.5 w-0.5 bg-green-400 rounded"></div>
       <div class="rotate-45 h-2.5 w-0.5 bg-green-400 rounded"></div>
     </span>
   </div>
   <div class="absolute flex flex-col h-full">
-    <div class="h-full w-2 overflow-hidden bg-gradient-to-b gradient flex items-end sm:w-5 rounded-t-3xl">
+    <div class="h-full w-2 overflow-hidden bg-linear-to-b gradient flex items-end sm:w-5 rounded-t-3xl">
       <div class="rotate-45 -mb-3 w-2 h-5 sm:-mb-5 sm:w-5 sm:h-12 bg-zinc-900"></div>
     </div>
-    <span class="flex flex-col gap-0.5 sm:hidden -ml-px -mt-[1px]">
+    <span class="flex flex-col gap-0.5 sm:hidden -ml-px -mt-px">
       <div class="-rotate-45 w-2.5 h-0.5 bg-green-400 rounded"></div>
       <div class="-rotate-45 w-2.5 h-0.5 bg-green-400 rounded"></div>
     </span>
