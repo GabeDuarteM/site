@@ -4,6 +4,7 @@ import FancyBorder from './FancyBorder.astro'
 import GithubLink from './GithubLink.astro'
 import LinkedinLink from './LinkedinLink.astro'
 import MetaTags from './MetaTags.astro'
+import Posthog from '../components/posthog.astro'
 import '../styles/global.css'
 
 export interface Props {
@@ -16,6 +17,7 @@ const { title } = Astro.props
 <!doctype html>
 <html class="bg-zinc-900" lang="en">
   <head>
+    <Posthog />
     <MetaTags title={title} />
   </head>
   <body class="mx-auto overflow-x-hidden md:flex md:items-center md:justify-center md:h-screen md:w-screen md:-mt-20!">

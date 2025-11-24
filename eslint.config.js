@@ -6,7 +6,7 @@ import prettier from 'eslint-config-prettier'
 
 export default [
   {
-    ignores: ['dist', 'node_modules', '.astro'],
+    ignores: ['dist', 'node_modules', '.astro', 'src/components/posthog.astro'],
   },
   js.configs.recommended,
   ...tseslint.configs.recommended,
