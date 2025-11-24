@@ -3,7 +3,7 @@
   "extends": ["config:base"],
   "packageRules": [
     {
-      "matchPackagePatterns": ["logrocket"],
+      "matchPackagePatterns": ["posthog"],
       "automerge": true
     },
     {

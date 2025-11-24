@@ -43,24 +43,3 @@ const description =
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
 </noscript>
-{
-  import.meta.env.PUBLIC_UMAMI_WEBSITE_ID && (
-    <script
-      async
-      defer
-      data-website-id={import.meta.env.PUBLIC_UMAMI_WEBSITE_ID}
-      src="https://espeon.gdm.dev/script.js"
-    />
-  )
-}
-<script>
-  import LogRocket from 'logrocket'
-
-  const projectId = import.meta.env.PUBLIC_LOGROCKET_PROJECT_ID
-
-  if (projectId) {
-    LogRocket.init(projectId, {
-      ingestServer: 'https://tools.gdm.dev/espeon/lr/data',
-    })
-  }
-</script>
