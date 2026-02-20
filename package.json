@@ -14,11 +14,11 @@
   },
   "dependencies": {
     "astro": "5.16.0",
-    "tailwindcss": "4.1.17"
+    "tailwindcss": "4.2.0"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "@tailwindcss/vite": "4.1.17",
+    "@tailwindcss/vite": "4.2.0",
     "@types/node": "24.10.13",
     "@typescript-eslint/eslint-plugin": "8.56.0",
     "@typescript-eslint/parser": "8.56.0",
