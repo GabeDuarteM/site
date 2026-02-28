@@ -1,6 +1,6 @@
 dist
 coverage
-pnpm-lock.yaml
+bun.lock
 .astro
 
 src/components/posthog.astro

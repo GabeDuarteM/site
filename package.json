@@ -10,7 +10,7 @@
     "astro": "astro",
     "check": "tsc --noEmit && eslint . --ext .js,.jsx,.ts,.tsx,.astro && prettier --check .",
     "check-no-prettier": "tsc --noEmit && eslint . --ext .js,.jsx,.ts,.tsx,.astro",
-    "ci": "pnpm run check-no-prettier && pnpm run build"
+    "ci": "bun run check-no-prettier && bun run build"
   },
   "dependencies": {
     "astro": "5.16.0",
