@@ -13,7 +13,7 @@
     "ci": "bun run check-no-prettier && bun run build"
   },
   "dependencies": {
-    "astro": "5.16.0",
+    "astro": "5.18.0",
     "tailwindcss": "4.1.17"
   },
   "devDependencies": {
