@@ -1,32 +1,26 @@
-const nodeToType = document.querySelector('#typedText')
-const nodeToHide = document.querySelector('#postTextTyped')
+const parts = [...document.querySelectorAll('#typedText > span')]
+const characters = parts.flatMap((element) => Array.from(element.textContent, (character) => ({ character, element })))
 
-if (!nodeToType || !nodeToHide) {
-  throw new Error("Whoops, this shouldn't happen, the textTyped was not found")
-}
-
-const fullText = nodeToHide.textContent || ''
-nodeToType.replaceChildren()
-
-type TypewriterPauses = Record<string, number>
-
-const customPauses: TypewriterPauses = {
+const customPauses: Record<string, number> = {
   '!': 200,
   '.': 300,
 }
 
 const typeWriter = (index = 0) => {
-  if (index >= fullText.length) {
+  if (index >= characters.length) {
     return
   }
 
-  setTimeout(
-    () => {
-      typeWriter(index + 1)
-    },
-    customPauses[fullText.charAt(index)] || 35,
-  )
-  nodeToType.textContent += fullText.charAt(index)
-  nodeToHide.textContent = fullText.slice(index + 1)
+  const next = characters[index]
+  next.element.textContent += next.character
+  setTimeout(() => {
+    typeWriter(index + 1)
+  }, customPauses[next.character] ?? 35)
 }
-typeWriter()
+
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  for (const part of parts) {
+    part.textContent = ''
+  }
+  typeWriter()
+}
