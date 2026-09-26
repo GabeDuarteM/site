@@ -52,7 +52,8 @@ const posthogEnabled = Boolean(posthogKey)
     })(document, window.posthog || [])
 
     posthog.init(posthogKey, {
-      api_host: 'https://tools.gdm.dev/espeon/ph',
+      api_host: 'https://espeon.gdm.dev',
+      ui_host: 'https://eu.posthog.com',
       defaults: '2025-05-24',
       person_profiles: 'always',
     })
