@@ -20,17 +20,17 @@ const { title } = Astro.props
     <Posthog />
     <MetaTags title={title} />
   </head>
-  <body class="mx-auto overflow-x-hidden md:flex md:items-center md:justify-center md:h-screen md:w-screen md:-mt-20!">
-    <div class="relative">
+  <body class="mx-auto px-6 pt-6 pb-10 overflow-x-hidden md:px-4 md:py-0 md:flex md:items-center md:justify-center md:h-screen md:w-screen md:-mt-20!">
+    <div class="relative max-md:mx-auto max-md:max-w-[680px]">
       <FancyBorder />
       <header>
-        <div class="p-8 sm:p-12 flex">
-          <a class="text-3xl sm:text-4xl font-thin text-center select-none font-heading" href="/">
+        <div class="py-4 md:p-12 flex max-md:items-center">
+          <a class="text-3xl md:text-4xl font-thin text-center select-none font-heading" href="/">
             G<span class="font-medium">D</span>
             <div class="bg-linear-to-r from-violet-500 to-green-500 h-0.5"></div>
           </a>
           <div class="ml-auto min-w-[30px]"></div>
-          <div class="flex items-center justify-center gap-6 mt-2">
+          <div class="flex items-center justify-center gap-1 md:gap-6 md:mt-2 max-md:[&_a]:grid max-md:[&_a]:size-11 max-md:[&_a]:place-items-center">
             <EmailLink />
             <GithubLink />
             <LinkedinLink />

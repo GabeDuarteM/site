@@ -1,34 +1,43 @@
 ---
 import Layout from '../layouts/Layout.astro'
 
-const fullText = `Hey! I'm Gabriel Duarte.\nYour friendly neighborhood developer.`
+const nameClasses = 'max-md:text-[clamp(44px,12vw,64px)] max-md:leading-[1.06]'
+const textParts = [
+  { className: 'max-md:mb-3.5 max-md:text-xl max-md:leading-tight', text: "Hey! I'm " },
+  { className: nameClasses, text: 'Gabriel ' },
+  { className: nameClasses, text: 'Duarte.' },
+  {
+    className: 'max-md:mt-5 max-md:max-w-[24ch] max-md:text-xl max-md:leading-normal',
+    text: '\nYour friendly neighborhood developer.',
+  },
+]
+const fullText = textParts.map(({ text }) => text).join('')
 ---
 
 <Layout title="Gabriel Duarte">
-  <div class="flex items-center justify-center flex-col md:mx-14 xl:mx-40 xl:my-16">
-    <div class="text-4xl text-center font-heading flex-row items-center mx-14 my-4 justify-center flex whitespace-pre-wrap">
-      <noscript>{fullText}</noscript>
-      <span class="relative inline-flex" id="textTyped">
-        <span class="absolute inset-0">
-          <span id="typedText"></span>
-          <span class="sr-only" id="postTextTyped">
-            {fullText}
-          </span>
+  <div class="flex flex-col justify-center gap-8 max-md:pt-8 max-md:pb-5 md:mx-14 md:items-center md:gap-0 xl:mx-40 xl:my-16">
+    <h1 class="font-heading flex items-center justify-start text-left text-4xl whitespace-normal md:mx-14 md:my-4 md:justify-center md:text-center md:whitespace-pre-wrap">
+      <span class="sr-only">{fullText}</span>
+      <span aria-hidden="true" class="relative block md:inline-flex" id="textTyped">
+        <span class="absolute inset-0" id="typedText">
+          {textParts.map(({ className, text }) => (
+            <span class:list={['max-md:block max-md:min-h-[1lh]', className]}>{text}</span>
+          ))}
         </span>
-        <span aria-hidden="true" class="invisible select-none">
-          {fullText}
+        <span class="invisible select-none">
+          {textParts.map(({ className, text }) => (
+            <span class:list={['max-md:block max-md:min-h-[1lh]', className]}>{text}</span>
+          ))}
         </span>
       </span>
-    </div>
+    </h1>
     <script src="../scripts/typewriter.ts"></script>
-    <div class="text-lg flex flex-col justify-center max-w-screen-sm items-center mx-14">
-      <p class="text-justify my-4">
-        <ul class="list-disc">
-          <li>Front-end developer born in Brazil, and based in Hamburg, Germany.</li>
-          <li>Always looking out for good talks and good music.</li>
-          <li>Passionate about cutting-edge, pixel-perfect and beautiful interfaces.</li>
-        </ul>
-      </p>
+    <div class="text-lg flex flex-col justify-center max-w-screen-sm items-center md:mx-14 max-md:max-w-none max-md:pt-7 max-md:border-t-2 max-md:[border-image:linear-gradient(to_right,#8b5cf6,#22c55e)_1] max-md:text-base max-md:leading-[1.65]">
+      <ul class="grid w-full gap-4.5 md:mt-8 md:block md:w-auto md:list-disc">
+        <li>Front-end developer born in Brazil, and based in Hamburg, Germany.</li>
+        <li>Always looking out for good talks and good music.</li>
+        <li>Passionate about cutting-edge, pixel-perfect and beautiful interfaces.</li>
+      </ul>
     </div>
   </div>
 </Layout>
