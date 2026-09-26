@@ -15,7 +15,7 @@ const { title } = Astro.props
 ---
 
 <!doctype html>
-<html class="bg-zinc-900" lang="en">
+<html class="bg-zinc-900 fonts-loading" lang="en">
   <head>
     <Posthog />
     <MetaTags title={title} />
@@ -25,7 +25,7 @@ const { title } = Astro.props
       <FancyBorder />
       <header>
         <div class="p-8 sm:p-12 flex">
-          <a class="text-3xl sm:text-4xl font-thin text-center select-none font-['Montserrat']" href="/">
+          <a class="text-3xl sm:text-4xl font-thin text-center select-none font-heading" href="/">
             G<span class="font-medium">D</span>
             <div class="bg-linear-to-r from-violet-500 to-green-500 h-0.5"></div>
           </a>
@@ -42,5 +42,6 @@ const { title } = Astro.props
       </main>
       <FancyBorder place="bottom" />
     </div>
+    <script src="../scripts/fonts-ready.ts"></script>
   </body>
 </html>
