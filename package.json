@@ -8,28 +8,48 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "check": "tsc --noEmit && eslint . --ext .js,.jsx,.ts,.tsx,.astro && prettier --check .",
-    "check-no-prettier": "tsc --noEmit && eslint . --ext .js,.jsx,.ts,.tsx,.astro",
-    "ci": "bun run check-no-prettier && bun run build"
+    "check": "astro check && ultracite check",
+    "ci": "bun run check && bun run build",
+    "fix": "ultracite fix"
   },
   "dependencies": {
-    "astro": "5.18.0",
-    "tailwindcss": "4.2.1"
+    "astro": "7.3.5",
+    "tailwindcss": "4.3.3"
   },
   "devDependencies": {
+    "@astrojs/check": "0.9.10",
     "@eslint/js": "10.0.1",
-    "@tailwindcss/vite": "4.2.1",
+    "@tailwindcss/vite": "4.3.3",
     "@types/node": "26.6.3",
     "@typescript-eslint/eslint-plugin": "8.70.1",
     "@typescript-eslint/parser": "8.70.1",
     "eslint": "10.11.0",
     "eslint-config-prettier": "10.1.8",
+    "eslint-import-resolver-typescript": "4.4.5",
     "eslint-plugin-astro": "3.2.1",
+    "eslint-plugin-compat": "7.0.2",
+    "eslint-plugin-cypress": "7.0.2",
+    "eslint-plugin-github": "6.1.2",
+    "eslint-plugin-html": "8.2.1",
+    "eslint-plugin-import-x": "4.17.1",
+    "eslint-plugin-jsdoc": "64.5.4",
     "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-n": "18.3.0",
+    "eslint-plugin-prettier": "5.5.6",
+    "eslint-plugin-promise": "7.3.0",
+    "eslint-plugin-sonarjs": "4.2.1",
+    "eslint-plugin-storybook": "10.6.0",
+    "eslint-plugin-unicorn": "74.0.0",
+    "eslint-plugin-unused-imports": "4.4.1",
     "globals": "17.12.0",
     "prettier": "3.9.9",
     "prettier-plugin-astro": "1.1.0",
-    "typescript": "5.9.3",
-    "typescript-eslint": "8.70.1"
+    "prettier-plugin-tailwindcss": "0.8.1",
+    "stylelint": "17.15.0",
+    "stylelint-config-idiomatic-order": "10.0.0",
+    "stylelint-config-standard": "40.0.0",
+    "stylelint-prettier": "5.0.3",
+    "typescript": "6.0.2",
+    "ultracite": "7.12.0"
   }
 }

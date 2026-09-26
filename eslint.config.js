@@ -1,34 +1,14 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import tseslint from 'typescript-eslint'
-import astro from 'eslint-plugin-astro'
-import prettier from 'eslint-config-prettier'
+// eslint-disable-next-line import-x/no-rename-default -- Both presets name their default export config.
+import core from 'ultracite/eslint/core'
+// eslint-disable-next-line import-x/no-rename-default -- Both presets name their default export config.
+import astro from 'ultracite/eslint/astro'
+import { configs } from 'eslint-plugin-astro'
 
 export default [
-  {
-    ignores: ['dist', 'node_modules', '.astro', 'src/components/posthog.astro'],
-  },
-  js.configs.recommended,
-  ...tseslint.configs.recommended,
-  ...astro.configs['flat/recommended'],
-  ...astro.configs['flat/jsx-a11y-strict'],
-  {
-    files: ['**/*.{js,jsx,ts,tsx}'],
-    languageOptions: {
-      globals: {
-        ...globals.browser,
-        ...globals.es2021,
-      },
-    },
-  },
-  {
-    files: ['**/*.{cjs,mjs}', '**/*.config.{js,cjs,mjs}'],
-    languageOptions: {
-      globals: {
-        ...globals.node,
-        ...globals.es2021,
-      },
-    },
-  },
-  prettier,
+  { ignores: ['.astro/**', '**/*.json', 'src/components/posthog.astro'] },
+  ...core,
+  ...configs['flat/recommended'],
+  ...configs['flat/jsx-a11y-strict'],
+  ...astro,
+  { files: ['**/*.astro'], processor: 'astro/astro' },
 ]

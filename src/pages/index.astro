@@ -6,51 +6,21 @@ const fullText = `Hey! I'm Gabriel Duarte.\nYour friendly neighborhood developer
 
 <Layout title="Gabriel Duarte">
   <div class="flex items-center justify-center flex-col md:mx-14 xl:mx-40 xl:my-16">
-    <div
-      class="text-4xl text-center font-['Montserrat'] flex-row items-center mx-14 my-4 justify-center flex whitespace-pre-wrap"
-    >
+    <div class="text-4xl text-center font-['Montserrat'] flex-row items-center mx-14 my-4 justify-center flex whitespace-pre-wrap">
       <noscript>{fullText}</noscript>
       <span class="relative inline-flex" id="textTyped">
-        <span class="absolute inset-0"
-          ><span id="typedText"></span>
-          <span id="postTextTyped" class="sr-only">{fullText}</span>
+        <span class="absolute inset-0">
+          <span id="typedText"></span>
+          <span class="sr-only" id="postTextTyped">
+            {fullText}
+          </span>
         </span>
-        <span class="invisible select-none" aria-hidden="true" role="presentation">{fullText}</span>
+        <span aria-hidden="true" class="invisible select-none">
+          {fullText}
+        </span>
       </span>
     </div>
-    <script>
-      const nodeToType = document.querySelector('#typedText')
-      const nodeToHide = document.querySelector('#postTextTyped')
-
-      if (!nodeToType || !nodeToHide) {
-        throw new Error("Whoops, this shouldn't happen, the textTyped was not found")
-      }
-
-      const fullText = nodeToHide.textContent || ''
-      nodeToType.innerHTML = ''
-
-      interface TypewriterPauses {
-        [keyof: string]: number
-      }
-
-      const customPauses: TypewriterPauses = {
-        '!': 200,
-        '.': 300,
-      }
-
-      let i = 0
-
-      const typeWriter = () => {
-        if (i < fullText.length) {
-          setTimeout(typeWriter, customPauses[fullText.charAt(i)] || 35)
-          nodeToType.textContent += fullText.charAt(i)
-          nodeToHide.textContent = fullText.substring(i + 1)
-          i++
-        }
-      }
-      typeWriter()
-    </script>
-
+    <script src="../scripts/typewriter.ts"></script>
     <div class="text-lg flex flex-col justify-center max-w-screen-sm items-center mx-14">
       <p class="text-justify my-4">
         <ul class="list-disc">

@@ -1,15 +1,15 @@
 @import 'tailwindcss';
 
-@source "./src/**/*.{astro,html,js,jsx,ts,tsx}";
+@source './src/**/*.{astro,html,js,jsx,ts,tsx}';
 
 @theme {
-  --color-bgColor: rgb(27 8 67);
+  --color-bg-color: rgb(27 8 67);
 }
 
 html,
 body {
-  margin: 0;
   padding: 0;
+  margin: 0;
   font-family:
     Roboto,
     -apple-system,
