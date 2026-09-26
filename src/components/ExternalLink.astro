@@ -6,4 +6,6 @@ export interface Props {
 const props = Astro.props
 ---
 
-<a class="underline" target="_blank" rel="noopener noreferrer" {...props}><slot /></a>
+<a class="underline" rel="noopener noreferrer" target="_blank" {...props}>
+  <slot />
+</a>
