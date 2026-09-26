@@ -1,4 +1,6 @@
 ---
+import { Font } from 'astro:assets'
+
 export interface Props {
   title: string
 }
@@ -24,22 +26,5 @@ const description =
 
 <title>{title}</title>
 
-<link href="https://fonts.googleapis.com" rel="preconnect" />
-<link crossorigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect" />
-<link
-  as="style"
-  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap"
-  onload="this.onload=null;this.rel='stylesheet'"
-  rel="preload"
-/>
-<link
-  as="style"
-  href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-  onload="this.onload=null;this.rel='stylesheet'"
-  rel="stylesheet"
-  rel="preload"
-/>
-<noscript>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-</noscript>
+<Font cssVariable="--font-montserrat" preload />
+<Font cssVariable="--font-roboto" preload />
