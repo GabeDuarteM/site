@@ -5,7 +5,7 @@ import astro from 'ultracite/eslint/astro'
 import { configs } from 'eslint-plugin-astro'
 
 export default [
-  { ignores: ['.astro/**', '**/*.json', 'src/components/posthog.astro'] },
+  { ignores: ['.astro/**', '**/*.json'] },
   ...core,
   ...configs['flat/recommended'],
   ...configs['flat/jsx-a11y-strict'],
