@@ -13,7 +13,7 @@
     "fix": "ultracite fix"
   },
   "dependencies": {
-    "astro": "7.3.5",
+    "astro": "7.3.6",
     "posthog-js": "1.436.1",
     "tailwindcss": "4.3.3"
   },
